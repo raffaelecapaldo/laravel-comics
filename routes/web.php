@@ -17,7 +17,8 @@ Route::get('/', function () {
     $data = [
         'navlinks' => config('extradb.navlinks'),
         'comicCards' => config('comics'),
-        'dcItems' => config('extradb.dcitems')
+        'dcItems' => config('extradb.dcitems'),
+        'footerLinks' => config('extradb.footerlinks')
     ];
 
     return view('home', $data);
