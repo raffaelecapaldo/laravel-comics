@@ -27,13 +27,17 @@ Route::get('/', function () {
 
 Route::get('/comics/{id}', function ($id) {
     $comics = config('comics');
+
     $data = [
         'navlinks' => config('extradb.navlinks'),
         'dcItems' => config('extradb.dcitems'),
-        'footerLinks' => config('extradb.footerlinks'),
-        'comic' => $comics[$id]
+        'footerLinks' => config('extradb.footerlinks')
+
     ];
-
-    return view('comics.show', $data);
+    if ($id >= 0 && $id < count($comics)) {
+        $data['comic'] = $comics[$id];
+        return view('comics.show', $data);
+    } else {
+        abort('404');
+    }
 })->name('comics');
-
