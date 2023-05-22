@@ -23,3 +23,17 @@ Route::get('/', function () {
 
     return view('home', $data);
 });
+
+
+Route::get('/comics/{id}', function ($id) {
+    $comics = config('comics');
+    $data = [
+        'navlinks' => config('extradb.navlinks'),
+        'dcItems' => config('extradb.dcitems'),
+        'footerLinks' => config('extradb.footerlinks'),
+        'comic' => $comics[$id]
+    ];
+
+    return view('comics.show', $data);
+})->name('comics');
+
