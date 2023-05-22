@@ -35,16 +35,23 @@
             </div>
         </div>
 
-        {{--    <div class="items-dc">
+           <div class="items-dc">
         <div class="container p-5">
             <div class="d-flex justify-content-around align-items-center flex-wrap gap-3">
+                @foreach ($dcItems as $dcItem)
                 <div class="itemdc text-white"> <!-- itemdc -->
-                    <img :class="{ smalldc: text === 'Comic Shop Locator' }" :src="image" :alt="text">
-                    <span class="ms-3 text-uppercase">{{ text }}</span>
+                    <img class="@if ($dcItem['text'] === 'Comic Shop Locator')
+                    smalldc
+                    @else
+                      ''
+                    @endif" src="{{ $dcItem['image'] }}" :alt="{{ $dcItem['text'] }}">
+                    <span class="ms-3 text-uppercase">{{ $dcItem['text'] }}</span>
                 </div>
+                @endforeach
+
             </div>
         </div>
-    </div> --}}
+    </div>
     </main>
 
 @endsection
