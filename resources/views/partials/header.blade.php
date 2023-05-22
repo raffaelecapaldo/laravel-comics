@@ -4,10 +4,14 @@
     </div>
     <nav>
       <ul class="d-flex gap-3 ">
-        <a :class="{active: link.current}" v-for="link in navbar" :href="link.url">
-          <li>{{ link.text }}</li>
-        </a>
+        @foreach ($navlinks as $navlinks)
+        <a href="{{$navlinks['url']}}">
+            <li>{{ $navlinks['text'] }}</li>
+          </a>
+        @endforeach
+
       </ul>
     </nav>
-    <div class="jumbotron"></div>
   </header>
+
+

@@ -3,7 +3,9 @@
 @section('title', 'Home')
 @section('content')
 <main>
-    <div class="comics">
+    <div class="jumbotron"></div>
+
+   {{--  <div class="comics">
 
         <div class="container cont-cards">
           <div class="showtitle text-white fs-3 fw-bold text-uppercase">
@@ -34,7 +36,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </main>
 
 @endsection

@@ -1,5 +1,5 @@
-@import "~bootstrap/scss/bootstrap";
 @use "./partials/variables" as *;
+@import "~bootstrap/scss/bootstrap";
 
 nav {
     a {
@@ -30,7 +30,7 @@ nav {
     width: 50%;
 }
 
-.container {
+.container-footernav {
     height: 450px;
 }
 

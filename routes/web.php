@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'navlinks' => config('extradb.navlinks')
+    ];
+
+    return view('home', $data);
 });
