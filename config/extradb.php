@@ -11,7 +11,7 @@ return [
         ],
         [
             "text" => "Comics",
-            "url" => "#",
+            "url" => '/',
             "current" => true,
         ],
         [

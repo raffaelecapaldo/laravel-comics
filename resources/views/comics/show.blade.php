@@ -1,5 +1,7 @@
 @extends('layouts.default')
-@section('title', 'Comic Details')
+@section('title')
+{{$comic['title']}}
+@endsection
 
 @section('content')
     <main>

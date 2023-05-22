@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'Home')
+@section('title', 'DC Comics - Home')
 @section('content')
     <main>
         <div class="jumbotron"></div>

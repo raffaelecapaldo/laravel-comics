@@ -22,7 +22,7 @@ Route::get('/', function () {
     ];
 
     return view('home', $data);
-});
+})->name('home');
 
 
 Route::get('/comics/{id}', function ($id) {
