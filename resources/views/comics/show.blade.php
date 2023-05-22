@@ -36,7 +36,11 @@
                         </div>
                         <div class="sub-content bmg1 col-7  py-3">
                             @foreach ($comic['artists'] as $artist)
-                            <span> {{$artist}} </span>
+                            <span> {{$artist}}, </span>
+                            @if ($loop->last)
+                            <span> {{$artist}}. </span>
+
+                            @endif
 
                             @endforeach
                         </div>
@@ -47,7 +51,11 @@
                         </div>
                         <div class="sub-content py-3 col-7">
                             @foreach ($comic['writers'] as $writer)
-                            <span> {{$writer}} </span>
+                            <span> {{$writer}}, </span>
+                            @if ($loop->last)
+                            <span> {{$writer}}. </span>
+
+                            @endif
 
                             @endforeach
                         </div>
